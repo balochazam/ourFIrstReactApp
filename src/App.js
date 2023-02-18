@@ -1,22 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Header from "./header";
+import StudentCard from "./studentCard";
+import { useState } from "react";
+import FormComp from "./formComponent"
 function App() {
+  const [count, setCount] = useState(0);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <Header />
+      {/* {list.map((e) => {
+        
+        return( 
+        <div key={e.userId}>
+        <img src="https://picsum.photos/200" />
+        <h1> {e.username} </h1>
+        <h1> {e.lastName} </h1>
+        <h1> {e.desc} </h1>
+        </div>
+      )})} */}
+     
+       <FormComp />
       </header>
     </div>
   );
